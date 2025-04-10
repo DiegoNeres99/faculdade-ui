@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+ import { HttpClient } from '@angular/common/http';
  import { Injectable } from '@angular/core';
  import { firstValueFrom } from 'rxjs';
  import { Disciplina } from '../core/models/disciplina.model';

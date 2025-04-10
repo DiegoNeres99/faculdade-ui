@@ -22,9 +22,8 @@ export class DisciplinaCadastroComponent implements OnInit {
   }
 
   cadastroDisciplina(form: NgForm){
-    console.log(this.disciplina);
-    // this.disciplinaService.adicionar(this.disciplina).then((obj) => {
+    console.log(this.disciplina);  
       
-    // })
+    
   }
 }

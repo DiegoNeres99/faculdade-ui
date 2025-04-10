@@ -7,4 +7,5 @@ export class Aluno {
     dataalteracao?: Date;
     usucriacao?: string;
     usualteracao?: string;
+    id?: number
   }

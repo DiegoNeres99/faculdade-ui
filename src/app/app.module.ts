@@ -5,7 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DisciplinaModule } from './pages/disciplina/disciplina.module';
-import { PrimengModule } from './primeng.module';
+import { PrimengModule } from './primeng.module'
+
 
 @NgModule({
   declarations: [
@@ -17,8 +18,9 @@ import { PrimengModule } from './primeng.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     PrimengModule,
-    DisciplinaModule
-  ],
+    DisciplinaModule,  
+   
+    ],
   providers: [
   ],
   bootstrap: [AppComponent]
