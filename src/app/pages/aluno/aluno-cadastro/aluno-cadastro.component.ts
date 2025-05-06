@@ -6,6 +6,7 @@ import { AlunoService } from '../aluno.service'; // Importa o serviço
   selector: 'app-aluno-cadastro',
   templateUrl: './aluno-cadastro.component.html',
 })
+
 export class AlunoCadastroComponent {
   aluno: Aluno = new Aluno(); // Cria um objeto aluno vazio para o formulário
 

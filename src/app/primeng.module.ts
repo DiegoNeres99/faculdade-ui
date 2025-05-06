@@ -3,7 +3,7 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
-import {CheckboxModule} from 'primeng/checkbox';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
 
@@ -11,8 +11,8 @@ import {CheckboxModule} from 'primeng/checkbox';
     ButtonModule,
     InputTextModule,
     TableModule,
-    CardModule,   
-    CheckboxModule 
+    CardModule,
+    ToastModule
   ]
 })
 export class PrimengModule { }

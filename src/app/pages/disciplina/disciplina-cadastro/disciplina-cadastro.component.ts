@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
 import { Disciplina } from '../../core/models/disciplina.model';
 import { DisciplinaService } from '../disciplina.service';
 
@@ -11,7 +13,9 @@ import { DisciplinaService } from '../disciplina.service';
 export class DisciplinaCadastroComponent implements OnInit {
    disciplina = new Disciplina();
   constructor(
-    private disciplinaService: DisciplinaService
+    private disciplinaService: DisciplinaService,
+    private messageService: MessageService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -22,8 +26,10 @@ export class DisciplinaCadastroComponent implements OnInit {
   }
 
   cadastroDisciplina(form: NgForm){
-    console.log(this.disciplina);  
-      
-    
+    console.log(this.disciplina);
+     this.disciplinaService.adicionar(this.disciplina).then((obj) => {
+      this.messageService.add({severity:'success', summary:'Disciplina', detail:'cadastrado com sucesso!'});
+      this.router.navigate(['/disciplinas']);
+  })
   }
 }
