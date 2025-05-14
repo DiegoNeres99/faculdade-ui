@@ -1,24 +1,39 @@
-  <p-card header="Cadastro de Disciplina">
+<p-card header="{{editando ? 'Edição de' : 'Cadastro de'}} Disciplinas">
+  
+  <div class="flex flex-wrap col-12">
+    <button pButton type="button" class="p-button p-button-raided" icon="pi pi-caret-left" pTooltip="Voltar"
+      tooltipPosition="top" label="Voltar" routerLink="/disciplinas"></button>
+  </div>
 
-    <div class="flex flex-wrap col-12">
-      <button pButton type="button" class="p-button p-button-raided" 
-      
-      icon="pi pi-caret-left" pTooltip="Voltar" tooltipPosition="top" label="Voltar"
-       routerLink="/disciplinas"></button>  
+  <form #form="ngForm" autocomplete="off" (ngSubmit)="salvar(form)">
+    <div class="grid flex flex-wrap">
+      <span class="col-12 -mb-3">Descrição</span>
+      <div class="col-12 md:col-6 lg:col-3 w-full">
+
+        <input pInputText name="descricao" #descricao="ngModel" [(ngModel)]="disciplina.descricao" type="text" minlength="5"
+          required="true">
+        <app-message *ngIf="descricao.errors?.required && (descricao.dirty || descricao.touched)" text="Informe uma descrição"></app-message>
+        <app-message *ngIf="descricao.errors?.minlength && (descricao.dirty || descricao.touched)" text="Mínimo  de {{ descricao.errors?.minlength?.requiredLength }} de caracteres"></app-message>
+      </div>
+      <div class="col-12">
+        <p-inputSwitch [ngModelOptions]="{standalone: true}" binary="true" [(ngModel)]="disciplina.status"
+          name="status"></p-inputSwitch>
+      </div>
+      <div>
+        <button [disabled]="form.invalid || salvando" pButton type="submit" label="Salvar"></button>
+      </div>
     </div>
 
-    <form #form="ngForm" autocomplete="off" (ngSubmit)="cadastroDisciplina(form)">
-         <div class="grid">
-          <span class="col-12 -mb-3">Descrição</span>
-          <div class="col-12 md:col-6 lg:col-3">
-            
-            <input pInputText name="descricao" #descricao="ngModel" [(ngModel)]="disciplina.descricao" type="text">
-          </div>
+    <div *ngIf="salvando" class="grid justify-content-center mt-2">
+      <div class="grid col-12 justify-content-center">
+        <p-progressSpinner [style]="{ width: '50px', height: '50px' }" styleClass="custom-spinner" strokeWidth="5"
+          animationDuration=".5s">
+        </p-progressSpinner>
+      </div>
+      <div class="grid col-12 justify-content-center">
+        <h6>Salvando aguarde...</h6>
+      </div>
+    </div>
+  </form>
 
-          <div class="flex flex-wrap col-12"></div>     
-             <button pButton type="submit" label="Salvar" class="p-button p-button-success"></button>
-          
-         </div>
-    </form>
-
-  </p-card>
+</p-card>

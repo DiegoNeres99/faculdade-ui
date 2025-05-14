@@ -1,7 +1,8 @@
-import { CommonModule } from '@angular/common';
+ import { CommonModule } from '@angular/common';
  import { NgModule } from '@angular/core';
  import { FormsModule } from '@angular/forms';
  import { PrimengModule } from 'src/app/primeng.module';
+ import { SharedModule } from '../shared/shared.module';
  import { DisciplinaCadastroComponent } from './disciplina-cadastro/disciplina-cadastro.component';
  import { DisciplinaListaComponent } from './disciplina-lista/disciplina-lista.component';
  import { DisciplinaRoutingModule } from './disciplina.routing';
@@ -13,7 +14,8 @@ import { CommonModule } from '@angular/common';
      CommonModule,
      FormsModule,
      DisciplinaRoutingModule,
-     PrimengModule
+     PrimengModule,
+     SharedModule
    ],
    declarations: [
    DisciplinaCadastroComponent,
