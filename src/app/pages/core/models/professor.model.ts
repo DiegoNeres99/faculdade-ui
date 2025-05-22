@@ -1,4 +1,7 @@
 export class Professor {
+    id(id: any) {
+      throw new Error('Method not implemented.');
+    }
     idprofessor?: number;
     nome?: string;
     cpf?: string;
