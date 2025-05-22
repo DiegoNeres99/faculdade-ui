@@ -4,6 +4,7 @@ import { CardModule } from 'primeng/card';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { InputTextModule } from 'primeng/inputtext';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { SidebarModule } from 'primeng/sidebar';
 import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
 
@@ -15,8 +16,8 @@ import { ToastModule } from 'primeng/toast';
     TableModule,
     CardModule,
     ToastModule,
-    InputSwitchModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    SidebarModule
   ]
 })
 export class PrimengModule { }
