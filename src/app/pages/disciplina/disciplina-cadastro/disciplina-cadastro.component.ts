@@ -14,7 +14,7 @@ import { Disciplina } from './../../core/models/disciplina.model';
 })
 export class DisciplinaCadastroComponent implements OnInit {
    disciplina = new Disciplina();
-   iddisc?: number;
+   iddisc: number;
    salvando: boolean = false;
   constructor(
     private disciplinaService: DisciplinaService,

@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-   sidebar: boolean = false;
-  constructor() { }
+   sibebar: boolean;
+  constructor(
+  ) { }
 
   ngOnInit() {
   }
