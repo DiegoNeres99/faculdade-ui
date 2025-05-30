@@ -9,6 +9,7 @@ import { AlunoService } from '../aluno.service'; // Importa o serviço
 
 export class AlunoCadastroComponent {
   aluno: Aluno = new Aluno(); // Cria um objeto aluno vazio para o formulário
+salvando: any;
 
   constructor(private alunoService: AlunoService) {}
 

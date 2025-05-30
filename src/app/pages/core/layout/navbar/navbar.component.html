@@ -10,10 +10,7 @@
     </div>
     <div class="d-flex align-items-center">
       <i class="pi pi-user cursor-pointer text-white" style="font-size: 1.5rem" (click)="op.toggle($event)"></i>
-
-      <!-- <i class="pi pi-lock textIcons cursor-pointer" style="font-size: 1.2rem" routerLink="/alterarsenha"></i>
-      <i class="pi pi-arrow-right textIcons cursor-pointer ml-3" style="font-size: 1.2rem" (click)="confirmarLogout(sair)"></i> -->
-      <!-- Adicione seu novo ícone aqui -->
+     
     </div>
   </div>
 </div>
@@ -21,7 +18,8 @@
 <p-overlayPanel #op>
   <ng-template pTemplate="content">
     <div class="col-12">
-      <button pButton class="p-button-rounded p-button-primary" icon="pi pi-lock" label="Alterar Senha" (click)="op.toggle($event)" routerLink="/alterarsenha"></button>
+      <button pButton class="p-button-rounded p-button-primary" icon="pi pi-lock" label="Alterar Senha"
+        (click)="op.toggle($event)" routerLink="/alterarsenha"></button>
     </div>
    
 
@@ -31,39 +29,19 @@
 <p-sidebar [(visible)]="sibebar" >
   <div class="flex flex-wrap">
     <div class="col-12">
-      <p-button
-        styleClass="p-button-rounded text-white w-full text-1xl btn-menu"
-        label="Disciplinas"
-        routerLink="/disciplinas"
-        
-        routerLinkActive="ativo"
-        (click)="sibebar = false"
-      ></p-button>
+      <p-button styleClass="p-button-rounded text-white w-full text-1xl btn-menu" label="Disciplinas"
+        routerLink="/disciplinas" routerLinkActive="ativo" (click)="sibebar = false"></p-button>
     </div>
+
     <div class="col-12">
-      <p-button
-        styleClass="p-button-rounded text-white w-full text-1xl btn-menu"
-        label="Professores"
-        routerLink="/professores"
-        routerLinkActive="ativo"
-        (click)="sibebar = false"
-      ></p-button>
+      <p-button styleClass="p-button-rounded text-white w-full text-1xl btn-menu" label="Professores"
+        routerLink="/professores" routerLinkActive="ativo" (click)="sibebar = false"></p-button>
     </div>
-    <div class="col-12">
-      <p-button
-        styleClass="p-button-rounded text-white w-full text-1xl btn-menu"
-        label="Alunos"
-        routerLink="/alunos"
-        routerLinkActive="ativo"
-        (click)="sibebar = false"
-      ></p-button>
+        <div class="col-12">
+      <p-button styleClass="p-button-rounded text-white w-full text-1xl btn-menu" label="Alunos"
+        routerLink="/alunos" routerLinkActive="ativo" (click)="sibebar = false"></p-button>
     </div>
-  
     
-   
-    
-   
-   
-    
+                
   </div>
 </p-sidebar>
