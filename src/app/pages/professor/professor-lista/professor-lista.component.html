@@ -16,9 +16,11 @@
         <th>Usuário Alteração</th>
       </tr>
     </ng-template>
-
     <ng-template pTemplate="body" let-professor>
       <tr>
+        <button pButton type="button" class="p-button-text p-button-warning"
+          ptooltip="Editar" icon="pi pi-pencil" tooltipPosition="top" 
+          [routerLink]="['/professores', professor.id]"></button>
         <td>{{ professor.nome }}</td>
         <td>{{ professor.cpf }}</td>
         <td>{{ professor.status ? 'Ativo' : 'Inativo' }}</td>

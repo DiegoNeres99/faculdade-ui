@@ -71,5 +71,10 @@
 
       </div>
     </form>
+    <!-- Spinner de carregamento -->
+    <div *ngIf="salvando" class="flex flex-column align-items-center mt-4">
+      <p-progressSpinner [style]="{ width: '50px', height: '50px' }" styleClass="custom-spinner" strokeWidth="5" animationDuration=".5s"></p-progressSpinner>
+      <h6 class="mt-2">Salvando, aguarde...</h6>
+    </div>
   </p-card>
 </div>

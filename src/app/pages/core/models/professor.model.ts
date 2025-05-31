@@ -1,8 +1,5 @@
-export class Professor {
-    id(id: any) {
-      throw new Error('Method not implemented.');
-    }
-    idprofessor?: number;
+export class Professor {    
+    id?: number;
     nome?: string;
     cpf?: string;
     status?: boolean;

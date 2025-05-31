@@ -56,15 +56,27 @@ export class ProfessorCadastroComponent implements OnInit {
   }
 
   atualizarTituloEdicao(){
-     this.title.setTitle(`Edição de Disciplina:${this.professor.nome}`)
+     this.title.setTitle(`Edição de Professor:${this.professor.nome}`)
   }
 
   salvar(form: NgForm){
-    this.professorService.adicionar(this.professor); // Adiciona o novo aluno
-        alert('Professor cadastrado com sucesso!');
-        this.professor = new Professor(); // Limpa o formulário
+    console.log(form);
+    if(this.editando) {
+      this.atualizarProfessor(form);
+    } else {
+      this.cadastroProfessor(form);
+    }
   }
 
+  cadastroProfessor(form: NgForm){
+    this.salvando = true;
+    console.log(this.professor);
+     this.professorService.adicionar(this.professor).then((obj) => {
+      this.messageService.add({severity:'success', summary:'Disciplina', detail:'cadastrado com sucesso!'});
+      this.salvando = false;
+      this.router.navigate(['/professores']);
+  });
+  }
   
   atualizarProfessor(form: NgForm){
     this.salvando = true;

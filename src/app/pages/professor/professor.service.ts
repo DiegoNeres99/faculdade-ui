@@ -33,7 +33,7 @@ export class ProfessorService {
 
   atualizar(obj: Professor): Promise<Professor> {
     return firstValueFrom(
-      this.http.put<Professor>(`${this.professorUrl}/${obj.idprofessor}`, obj)
+      this.http.put<Professor>(`${this.professorUrl}/${obj.id}`, obj)
     ).then((response) => response as Professor);
   }
 }
