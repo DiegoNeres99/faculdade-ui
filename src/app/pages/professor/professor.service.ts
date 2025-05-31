@@ -10,7 +10,7 @@ export class ProfessorService {
 
   constructor(private http: HttpClient) {
     this.professorUrl =
-      'https://658b1550ba789a9622386895.mockapi.io/professor';
+      'https://683a628d43bb370a86728d7f.mockapi.io/professor';
   }
 
   listar(): Promise<any> {

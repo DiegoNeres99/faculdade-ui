@@ -7,8 +7,8 @@
     <ng-template pTemplate="header">
       <tr>
         <th></th>
-        <th width="300px">Descrição</th>
-        <th width="100px">Status</th>
+        <th>Descrição</th>
+        <th>Status</th>
         <th>Data Criação</th>
         <th>Usuário Criação</th>
         <th>Data Alteração</th>
@@ -24,10 +24,10 @@
         </td>
         <td>{{disc.descricao}}</td>
         <td>{{disc.status && 'Ativo' || 'Inativo'}}</td>
-        <td>{{disc.datacriacao | date : 'dd/MM/YYYY'}}</td>
-        <td>{{disc.usuariocriacao}}</td>
-        <td>{{disc.dataalteracao | date : 'dd/MM/YYYY'}}</td>
-        <td>{{disc.usuarioalteracao}}</td>
+        <td>{{disc.datacriacao * 1000 | date : 'dd/MM/YYYY'}}</td>
+        <td>{{disc.usucriacao}}</td>
+        <td>{{disc.dataalteracao * 1000| date : 'dd/MM/YYYY'}}</td>
+        <td>{{disc.usualteracao}}</td>
       </tr>
     </ng-template>
   </p-table>

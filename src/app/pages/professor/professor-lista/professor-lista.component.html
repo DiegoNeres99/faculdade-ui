@@ -22,9 +22,9 @@
         <td>{{ professor.nome }}</td>
         <td>{{ professor.cpf }}</td>
         <td>{{ professor.status ? 'Ativo' : 'Inativo' }}</td>
-        <td>{{ professor.datacriacao | date : 'dd/MM/yyyy' }}</td>
+        <td>{{ professor.datacriacao * 1000| date : 'dd/MM/yyyy' }}</td>
         <td>{{ professor.usucriacao }}</td>
-        <td>{{ professor.dataalteracao | date : 'dd/MM/yyyy' }}</td>
+        <td>{{ professor.dataalteracao * 1000 | date : 'dd/MM/yyyy' }}</td>
         <td>{{ professor.usualteracao }}</td>
       </tr>
     </ng-template>

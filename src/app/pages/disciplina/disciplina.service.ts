@@ -10,7 +10,7 @@ export class DisciplinaService {
 
   constructor(private http: HttpClient) {
     this.disciplinaUrl =
-      'https://658b1550ba789a9622386895.mockapi.io/disciplina';
+      'https://683a628d43bb370a86728d7f.mockapi.io/disciplina';
   }
 
   listar(): Promise<any> {
