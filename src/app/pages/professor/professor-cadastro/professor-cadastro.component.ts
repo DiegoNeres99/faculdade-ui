@@ -72,7 +72,7 @@ export class ProfessorCadastroComponent implements OnInit {
     this.salvando = true;
     console.log(this.professor);
      this.professorService.adicionar(this.professor).then((obj) => {
-      this.messageService.add({severity:'success', summary:'Disciplina', detail:'cadastrado com sucesso!'});
+      this.messageService.add({severity:'success', summary:'Professor', detail:'cadastrado com sucesso!'});
       this.salvando = false;
       this.router.navigate(['/professores']);
   });
